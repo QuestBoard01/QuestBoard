@@ -1,7 +1,7 @@
 public with sharing class ServiceXP {
     public static void definirXPBaseadoNaDificuldadeEscolhida(List<MissionPlayer__c> missions) {
         for(MissionPlayer__c mission : missions) {
-            switch on mission.difficulty__c {
+            switch on mission.Difficulty__c {
                 when 'Easy' {
                     mission.XP__c = 250;
                 }
