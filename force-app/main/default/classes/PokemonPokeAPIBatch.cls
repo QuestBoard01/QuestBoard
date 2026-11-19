@@ -1,4 +1,7 @@
-public with sharing class PokemonPokeAPIBatch implements Database.Batchable<SObject>, Database.AllowsCallouts {
+    public with sharing class PokemonPokeAPIBatch implements Database.Batchable<SObject>, Database.AllowsCallouts {
+    public List<Player__c> listPlayers;
+    public Map<Id, Player__c> oldPlayer;
+
     public class Oi{
         public Sprite sprites;
     } 
@@ -14,27 +17,22 @@ public with sharing class PokemonPokeAPIBatch implements Database.Batchable<SObj
     public class Showdown{
         public String front_default;
     }
-    public Database.QueryLocator start(Database.BatchableContext bc) {
-        return Database.getQueryLocator('SELECT Id FROM Player__c');
+    
+    public List<Player__c> start(Database.BatchableContext bc) {
+        return this.listPlayers;
     }
     
-    public void execute(Database.BatchableContext bc, List<SObject> scope, List<Player__c> listPlayers, Map<Id, Player__c> oldPlayer) {
+    public PokemonPokeAPIBatch(List<Player__c> listaDePlayers){
+        this.listPlayers = listaDePlayers;
+    }
+
+    public void execute(Database.BatchableContext bc, List<SObject> scope) {
         Player__c player = (Player__c) scope[0];
         //Buscar os pokemon do cara
         //randomizar um novo prokemon
         //chamar a api para pegar o pokemon
         //salvar o pokemon relacionado ao cara
-        
-        for(Player__c play : listPlayers){
-        Player__c oldPlay = oldPlayer.get()
-        if(play.Level__c = oldPlayer.Level__c)
-            nada acontece
-        }else{
-
-        }
     
-
-
         Integer maximo = 1350;
         Integer minimo = 1;
 

@@ -1,10 +1,10 @@
 public with sharing class ServiceMissionStatus {
-    public static void missaoDeclaradaFeitaStatusVaiProPlayer(List<Mission__c> mission, Map<Id, Mission__c> oldMission) {
+    public static void missaoDeclaradaFeitaStatusVaiProPlayer(List<MissionPlayer__c> missionPlayer, Map<Id, MissionPlayer__c> oldMission) {
         
         Map<Id, Decimal> playersIds = new Map<Id, Decimal>();
 
-        for(Mission__c mis : mission){
-            Mission__c oldMis = oldMission.get(mis.Id);
+        for(MissionPlayer__c mis : missionPlayer){
+            MissionPlayer__c oldMis = oldMission.get(mis.Id);
 
             if(mis.Status__c == 'Completed' && mis.Status__c != oldMis.Status__c){
                 if(!playersIds.containsKey(mis.Player__c)) {
