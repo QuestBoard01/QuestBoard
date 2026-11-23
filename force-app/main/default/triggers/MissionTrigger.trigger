@@ -1,4 +1,9 @@
-trigger MissionTrigger on Mission__c (before insert, before update, after update) {
+trigger MissionTrigger on Mission__c (before insert) {
+    if(Trigger.isInsert){
+        ServiceXP.definirXPBaseadoNaDificuldadeEscolhida(Trigger.new);
+    }
 }
+
+
 
 

@@ -1,4 +1,4 @@
-public with sharing class ServiceMissionStatus {
+public with sharing class ServiceMissionStatus { //* AJEITAR CAMPO DO XP DA MISSAO QUE TA WRONG PRONTOOOO
     public static void missaoDeclaradaFeitaStatusVaiProPlayer(List<MissionPlayer__c> missionPlayer, Map<Id, MissionPlayer__c> oldMission) {
         
         Map<Id, Decimal> playersIds = new Map<Id, Decimal>();
@@ -8,14 +8,14 @@ public with sharing class ServiceMissionStatus {
 
             if(mis.Status__c == 'Completed' && mis.Status__c != oldMis.Status__c){
                 if(!playersIds.containsKey(mis.Player__c)) {
-                    playersIds.put(mis.Player__c, mis.XP__c);
+                    playersIds.put(mis.Player__c, mis.MissionXP__c);
                 } else {
-                    playersIds.put(mis.Player__c, playersIds.get(mis.Player__c) + mis.XP__c);
+                    playersIds.put(mis.Player__c, playersIds.get(mis.Player__c) + mis.MissionXP__c);
                 }
             }
         }
 
-        List<Player__c> players = [SELECT Id, XP__c FROM Player__c WHERE Id IN : playersIds.keySet()];
+        List<Player__c> players = [SELECT Id, XP__c FROM Player__c WHERE Id IN : playersIds.keySet()];  
         
         for(Player__c player : players) {
             Decimal misXP = playersIds.get(player.Id);
