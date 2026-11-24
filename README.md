@@ -1,58 +1,83 @@
-# Salesforce DX Project
+<div align="center">
 
-Salesforce DX is a development approach that brings source-driven development, team collaboration, and continuous integration to the Salesforce Platform. Instead of working directly in an org through a web browser, you work with metadata as source files in a local DX project, track changes in version control, and deploy through automated processes.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7F5AF0,100:2CB67D&height=180&section=header&text=QuestBoard&fontSize=60&fontColor=ffffff&animation=fadeIn" alt="QuestBoard" />
 
-This project template gets you started with the tools and structure you need to build Salesforce applications using source control, scratch orgs, and the Salesforce CLI.
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=7F5AF0&center=true&vCenter=true&width=520&lines=Aceite+miss%C3%B5es+%E2%9A%94%EF%B8%8F;Complete+desafios+%F0%9F%8F%86;Ganhe+XP+e+recompensas+%E2%AD%90" alt="Typing SVG" />
 
-## Prerequisites
+![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white)
+![Apex](https://img.shields.io/badge/Apex-1798C1?style=for-the-badge&logo=salesforce&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![Status](https://img.shields.io/badge/status-em_desenvolvimento-yellow?style=for-the-badge)
 
-Before you start, make sure you have:
+</div>
 
-- **Salesforce CLI** - Download from [developer.salesforce.com/tools/salesforcecli](https://developer.salesforce.com/tools/salesforcecli). See [Install Salesforce CLI](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli.htm) for details.
-- **VS Code with Salesforce Extension Pack** - See [Installation Instructions](https://developer.salesforce.com/docs/platform/sfvscode-extensions/guide/install.html) for details. Includes the Agentforce Vibes extension.
-- **A development org** - Sign up for a free Developer Edition org [here](https://developer.salesforce.com/signup).
-- **Dev Hub enabled** (optional, required to create scratch orgs) - You can enable Dev Hub in your development org under Setup > Dev Hub.  See [Provide Developers Access to Salesforce DX Tools](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_setup_dx_tools.htm).
+---
 
-## Project Structure
+## 🎮 O que é?
 
-Your DX project follows this structure:
+Um quadro de missões estilo RPG feito no **Salesforce**. O jogador escolhe uma missão, define a dificuldade e, ao concluir, o XP vai direto para o perfil dele.
 
-- **`force-app/main/default/`** - Your metadata source files live in this default package directory. You can configure additional package directories in the `sfdx-project.json` file.
-- **`config/`** - Scratch org definitions and project settings
-- **`scripts/`** - Automation scripts for common tasks
-- **`sfdx-project.json`** - Project manifest that defines package directories, namespace, API version, and other project-level settings
+## ⚡ XP por dificuldade
 
-See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm).
+| Dificuldade | XP |
+|:-----------:|:--:|
+| 🟢 Easy | 250 |
+| 🟡 Medium | 1000 |
+| 🟠 Hard | 1500 |
+| 🔴 Super Hard | 2000 |
 
-## Get Started
+---
 
-Ready to start developing? The [Get Started with Salesforce DX](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_get_started_dx.htm) guide walks you through your first project, from creating a scratch org to creating a simple Apex class or LWC to deploying your code to a sandbox.
+<details>
+<summary><b>🗂️ Objetos</b> (clique para abrir)</summary>
+<br>
 
-## Common Salesforce CLI Commands
+- **`Player__c`**: o jogador e seu XP total
+- **`Mission__c`**: a missão disponível
+- **`MissionPlayer__c`**: liga jogador e missão (dificuldade, status e XP)
+- **`Reward__c`**: recompensa conquistada
 
-Here are common CLI commands that you'll use the most:
+</details>
 
-- `sf org login web`: Authorize an org
-- `sf org open`: Open your org in a browser
-- `sf org create scratch`: Create a scratch org
-- `sf project deploy start`: Deploy metadata to your org
-- `sf project retrieve start`: Retrieve metadata from your org
-- `sf template generate <artifact>`: Scaffold new components, such as Apex classes and triggers, LWC components, Lightning apps, and more
-- `sf apex <command>`: Run Apex tests, run anonymous Apex blocks, and view logs
-- `sf data <command>`: Work with test data
-- `sf alias <command>`: Manage org aliases
-- `sf config <command>`: Configure CLI settings
+<details>
+<summary><b>🧠 Como funciona</b> (clique para abrir)</summary>
+<br>
 
-## Use Agentforce Vibes to Build Lightning Apps
+1. Ao escolher a dificuldade, `ServiceXP` preenche o XP da missão.
+2. Ao marcar a missão como `Completed`, `ServiceMissionStatus` soma o XP ao jogador.
+3. Quando o jogador sobe de nível, um Batch sorteia um Pokémon como recompensa via **PokéAPI**.
 
-Transform your ideas into custom Lightning apps that extend CRM workflows directly in Lightning Experience. Through natural conversations with Agentforce Vibes, implement custom objects and fields, complex business logic, and dynamic UI components. See [Build a Lightning App Using Agentforce Vibes](https://developer.salesforce.com/docs/platform/einstein-for-devs/guide/lexapp-overview.html).
+</details>
 
-## Additional Resources
+<details>
+<summary><b>🚀 Como rodar</b> (clique para abrir)</summary>
+<br>
 
-- [Agentforce Vibes Developer Guide](https://developer.salesforce.com/docs/platform/einstein-for-devs/guide/einstein-overview.html)
-- [Salesforce CLI Installation Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/)
-- [Salesforce CLI Plugin Development Guide](https://developer.salesforce.com/docs/platform/salesforce-cli-plugin/guide/conceptual-overview.html)
-- [Salesforce VS Code Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
+```bash
+git clone https://github.com/SEU-USUARIO/QuestBoard.git
+cd QuestBoard
+sf org login web --alias questboard
+sf project deploy start --source-dir force-app --target-org questboard
+```
 
+</details>
+
+---
+
+## 🗺️ Roadmap
+
+- [x] XP por dificuldade
+- [x] XP somado ao jogador
+- [ ] Recompensas com PokéAPI
+- [ ] Testes unitários
+- [ ] Ranking de jogadores
+
+---
+
+<div align="center">
+
+Feito por **[@ccamysz](https://github.com/ccamysz)**, **[@CarolineEvelyn](https://github.com/CarolineEvelyn)** e **[@bielflas](https://github.com/bielflas)** 💜
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7F5AF0,100:2CB67D&height=100&section=footer" alt="" />
+
+</div>
