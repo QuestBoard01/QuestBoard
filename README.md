@@ -13,7 +13,6 @@
 
 </div>
 
-<p align="center">🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥</p>
 
 ## 🎮 O que é?
 
@@ -28,7 +27,6 @@ Um quadro de missões estilo RPG feito no **Salesforce**. O jogador escolhe uma 
 | 🟠 Hard | 1500 |
 | 🔴 Super Hard | 2000 |
 
-<p align="center">🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥</p>
 
 <details>
 <summary><b>🗂️ Objetos</b> (clique para abrir)</summary>
@@ -64,7 +62,7 @@ sf project deploy start --source-dir force-app --target-org questboard
 
 </details>
 
-<p align="center">🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥</p>
+
 
 ## 🗺️ Roadmap
 
