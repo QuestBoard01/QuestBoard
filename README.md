@@ -1,8 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7F5AF0,100:2CB67D&height=180&section=header&text=QuestBoard&fontSize=60&fontColor=ffffff&animation=fadeIn" alt="QuestBoard" />
+<img src="./assets/banner.svg" alt="QuestBoard" width="100%" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=7F5AF0&center=true&vCenter=true&width=520&lines=Aceite+miss%C3%B5es+%E2%9A%94%EF%B8%8F;Complete+desafios+%F0%9F%8F%86;Ganhe+XP+e+recompensas+%E2%AD%90" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=14&pause=1000&color=2CB67D&center=true&vCenter=true&width=700&height=40&lines=Aceite+miss%C3%B5es;Complete+desafios;Ganhe+XP+e+recompensas" alt="Typing SVG" />
+
+<br>
 
 ![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white)
 ![Apex](https://img.shields.io/badge/Apex-1798C1?style=for-the-badge&logo=salesforce&logoColor=white)
@@ -11,7 +13,7 @@
 
 </div>
 
----
+<img src="./assets/divider.svg" alt="" width="100%" />
 
 ## 🎮 O que é?
 
@@ -26,7 +28,7 @@ Um quadro de missões estilo RPG feito no **Salesforce**. O jogador escolhe uma 
 | 🟠 Hard | 1500 |
 | 🔴 Super Hard | 2000 |
 
----
+<img src="./assets/divider.svg" alt="" width="100%" />
 
 <details>
 <summary><b>🗂️ Objetos</b> (clique para abrir)</summary>
@@ -62,7 +64,7 @@ sf project deploy start --source-dir force-app --target-org questboard
 
 </details>
 
----
+<img src="./assets/divider.svg" alt="" width="100%" />
 
 ## 🗺️ Roadmap
 
@@ -72,12 +74,10 @@ sf project deploy start --source-dir force-app --target-org questboard
 - [ ] Testes unitários
 - [ ] Ranking de jogadores
 
----
+<img src="./assets/divider.svg" alt="" width="100%" />
 
 <div align="center">
 
 Feito por **[@ccamysz](https://github.com/ccamysz)**, **[@CarolineEvelyn](https://github.com/CarolineEvelyn)** e **[@bielflas](https://github.com/bielflas)** 💜
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7F5AF0,100:2CB67D&height=100&section=footer" alt="" />
 
 </div>
