@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="./assets/banner.svg" alt="QuestBoard" width="100%" />
+<img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=38&duration=2500&pause=1000&color=FFD43B&background=0B0618FF&center=true&vCenter=true&repeat=false&width=800&height=140&lines=QUESTBOARD" alt="QuestBoard" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=14&pause=1000&color=2CB67D&center=true&vCenter=true&width=700&height=40&lines=Aceite+miss%C3%B5es;Complete+desafios;Ganhe+XP+e+recompensas" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=13&pause=1000&color=2CB67D&background=0B0618FF&center=true&vCenter=true&width=800&height=60&lines=Aceite+miss%C3%B5es;Complete+desafios;Ganhe+XP+e+recompensas;PRESS+START" alt="Aceite missões, complete desafios, ganhe XP" />
 
 <br>
 
@@ -13,7 +13,7 @@
 
 </div>
 
-<img src="./assets/divider.svg" alt="" width="100%" />
+<p align="center">🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥</p>
 
 ## 🎮 O que é?
 
@@ -28,7 +28,7 @@ Um quadro de missões estilo RPG feito no **Salesforce**. O jogador escolhe uma 
 | 🟠 Hard | 1500 |
 | 🔴 Super Hard | 2000 |
 
-<img src="./assets/divider.svg" alt="" width="100%" />
+<p align="center">🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥</p>
 
 <details>
 <summary><b>🗂️ Objetos</b> (clique para abrir)</summary>
@@ -64,7 +64,7 @@ sf project deploy start --source-dir force-app --target-org questboard
 
 </details>
 
-<img src="./assets/divider.svg" alt="" width="100%" />
+<p align="center">🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥</p>
 
 ## 🗺️ Roadmap
 
@@ -74,7 +74,7 @@ sf project deploy start --source-dir force-app --target-org questboard
 - [ ] Testes unitários
 - [ ] Ranking de jogadores
 
-<img src="./assets/divider.svg" alt="" width="100%" />
+<p align="center">🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥🟪🟩🟨🟥</p>
 
 <div align="center">
 
