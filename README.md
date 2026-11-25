@@ -56,7 +56,7 @@ Um quadro de missões estilo RPG feito no **Salesforce**. O jogador escolhe uma 
 <br>
 
 ```bash
-git clone https://github.com/SEU-USUARIO/QuestBoard.git
+git clone https://github.com/QuestBoard01/QuestBoard.git
 cd QuestBoard
 sf org login web --alias questboard
 sf project deploy start --source-dir force-app --target-org questboard
