@@ -1,6 +1,6 @@
-public with sharing class ServiceMissionStatus { //* AJEITAR CAMPO DO XP DA MISSAO QUE TA WRONG PRONTOOOO
-    public static void missaoDeclaradaFeitaStatusVaiProPlayer(List<MissionPlayer__c> missionPlayer, Map<Id, MissionPlayer__c> oldMission) {
-        
+public with sharing class MissionStatusService { 
+    public static void earnXP(List<MissionPlayer__c> missionPlayer, Map<Id, MissionPlayer__c> oldMission) {
+                        
         Map<Id, Decimal> playersIds = new Map<Id, Decimal>();
 
         for(MissionPlayer__c mis : missionPlayer){

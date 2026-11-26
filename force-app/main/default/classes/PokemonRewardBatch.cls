@@ -1,8 +1,8 @@
-    public with sharing class PokemonPokeAPIBatch implements Database.Batchable<SObject>, Database.AllowsCallouts {
+    public with sharing class PokemonRewardBatch implements Database.Batchable<SObject>, Database.AllowsCallouts {
     public List<Player__c> listPlayers;
     public Map<Id, Player__c> oldPlayer;
 
-    public class Oi{
+    public class PokemonDetailResponse{
         public Sprite sprites;
     } 
     
@@ -22,16 +22,12 @@
         return this.listPlayers;
     }
     
-    public PokemonPokeAPIBatch(List<Player__c> listaDePlayers){
+    public PokemonRewardBatch(List<Player__c> listaDePlayers){
         this.listPlayers = listaDePlayers;
     }
 
     public void execute(Database.BatchableContext bc, List<SObject> scope) {
         Player__c player = (Player__c) scope[0];
-        //Buscar os pokemon do cara
-        //randomizar um novo prokemon
-        //chamar a api para pegar o pokemon
-        //salvar o pokemon relacionado ao cara
     
         Integer maximo = 1350;
         Integer minimo = 1;
@@ -53,8 +49,8 @@
         HttpRequest newRequest = new HttpRequest();
         newRequest.setEndpoint('https://pokeapi.co/api/v2/pokemon?limit=1&offset=' + random);
         newRequest.setMethod('GET');
-
-       
+            
+        
 
 		HttpResponse response = newHttp.send(newRequest);
         PokemonPokiAPI data = (PokemonPokiAPI) JSON.deserialize(response.getBody(), PokemonPokiAPI.class);
@@ -65,7 +61,7 @@
         newRequest2.setMethod('GET');
 
         HttpResponse response2 = newHttp.send(newRequest2);
-        Oi data2 = (Oi) JSON.deserialize(response2.getBody(), Oi.class);
+        PokemonDetailResponse data2 = (PokemonDetailResponse) JSON.deserialize(response2.getBody(), PokemonDetailResponse.class);
             
 
         insert new Reward__c(
