@@ -1,4 +1,4 @@
-public with sharing class LevelPlayerService {
+public with sharing class LevelPlayerService { 
     public static void playerReward(List<Player__c> players, Map<Id, Player__c> oldPlayerMap){
         List<Player__c> playersUppingLevel = new List<Player__c>();
         
